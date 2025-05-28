@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import * as React from "react"
@@ -60,16 +61,18 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("size-4", className)} {...props} />
-        ),
-        IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("size-4", className)} {...props} />
-        ),
-      }}
+          IconLeft: ({ className: {...className}, ...props }) => (
+            <ChevronLeft {...props} className={cn("size-4", className)} />
+          ),
+        IconRight: ({ className: { ...className }, ...props }) => (
+            <ChevronRight {...props} className={cn("size-4", className)} />
+          ),
+      } as any }
       {...props}
     />
   )
 }
 
 export { Calendar }
+
+
