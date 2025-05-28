@@ -15,15 +15,11 @@ import { GridPattern } from './magicui/grid-pattern';
 import { cn } from '@/lib/utils';
 import { SparklesText } from './magicui/sparkles-text';
 import { BoxReveal } from './magicui/box-reveal';
-import { InteractiveHoverButton } from './magicui/interactive-hover-button';
-import { CoolMode } from './magicui/cool-mode';
-import { useRouter } from 'next/navigation';
 
 function Header() {
     const typewriterRef = useRef(null);
     const { t } = useTranslation('common');
     const [loading, setLoading] = useState(true);
-    const router = useRouter();
 
     useEffect(() => {
         // Initialize AOS (Animation On Scroll)
@@ -107,17 +103,6 @@ function Header() {
                                     ບໍ່ວ່າຈະເຮັດໜັງສືຜ່ານແດນ ວີຊ່າທ່ອງທ່ຽວ, ໃບຂັບຂີ່ສາກົນ ຫຼື ໃບທະບຽນການແຕ່ງງານກັບຄົນຕ່າງປະເທດ ພວກເຮົາພ້ອມຊ່ວຍທ່ານທຸກຂັ້ນຕອນ. ດ້ວຍປະສົບການແລະການດູແລ.
                                 </span>
                             </BoxReveal>
-                        </div>
-                        <div className='mt-10'>
-                            <CoolMode>
-                                <InteractiveHoverButton
-                                    customProp='ຈອງຄິວເລີຍ'
-                                    className='bg-yellow-500'
-                                    onClick={() => router.push('/apply')}
-                                >
-                                    ຈອງຄິວເລີຍ
-                                </InteractiveHoverButton>
-                            </CoolMode>
                         </div>
                     </div>
 
