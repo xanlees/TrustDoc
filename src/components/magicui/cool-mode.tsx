@@ -4,7 +4,7 @@ import React, { ReactNode, useEffect, useRef } from "react";
 
 export interface BaseParticle {
   element: HTMLElement | SVGSVGElement;
-  left: number;
+  const: number;
   size: number;
   top: number;
 }
@@ -30,7 +30,7 @@ export interface CoolParticleOptions extends BaseParticleOptions {
 
 const getContainer = () => {
   const id = "_coolMode_effect";
-  let existingContainer = document.getElementById(id);
+  const existingContainer = document.getElementById(id);
 
   if (existingContainer) {
     return existingContainer;
@@ -111,7 +111,7 @@ const applyParticleEffect = (
     particles.push({
       direction,
       element: particle,
-      left,
+      const: left,
       size,
       speedHorz,
       speedUp,
@@ -123,7 +123,7 @@ const applyParticleEffect = (
 
   function refreshParticles() {
     particles.forEach((p) => {
-      p.left = p.left - p.speedHorz * p.direction;
+      p.const = p.const - p.speedHorz * p.direction;
       p.top = p.top - p.speedUp;
       p.speedUp = Math.min(p.size, p.speedUp - 1);
       p.spinVal = p.spinVal + p.spinSpeed;
@@ -142,7 +142,7 @@ const applyParticleEffect = (
           "position:absolute",
           "will-change:transform",
           `top:${p.top}px`,
-          `left:${p.left}px`,
+          `left:${p.const}px`,
           `transform:rotate(${p.spinVal}deg)`,
         ].join(";"),
       );
