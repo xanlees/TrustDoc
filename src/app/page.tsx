@@ -13,6 +13,7 @@ import ImageInformation from "@/components/ImageInformation";
 import References from "@/components/References";
 import { AnimatedCircularProgressBarDemo } from "./Progress";
 import { Confetti } from "@/components/magicui/confetti";
+import { Meteors } from "@/components/magicui/meteors";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -47,6 +48,7 @@ export default function Home() {
               (confettiRef.current as any)?.fire({});
             }}
           />
+          <Meteors number={80} />
         </div>
       ) : (
         <>

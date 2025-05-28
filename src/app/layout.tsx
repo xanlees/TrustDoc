@@ -10,7 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'TrustDoc',
   icons: {
-    icon: '/TrustDoc.png',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/TrustDoc.png' }
+    ],
     shortcut: '/TrustDoc.png',
     apple: '/TrustDoc.png',
     other: {
@@ -30,7 +33,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
@@ -42,3 +45,4 @@ export default function RootLayout({
     </html>
   );
 }
+

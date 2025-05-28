@@ -18,6 +18,7 @@ function Footer() {
                         </p>
                         <ul>
                             <li className='mt-2'><a className=' text-[0.875rem]' href="">📞 ໂທ: 020 92351270</a></li>
+                            <li className='mt-2'><a className=' text-[0.875rem]' href="">📞 ໂທ: 020 92350299</a></li>
                             <li className='mt-2'><a className=' text-[0.875rem]' href="">✉️ ອີເມວ: meejthojxkh@gmail.com</a></li>
                         </ul>
                         <div className=" relative mb-5 md:flex-row -translate-x-7 sm:-translate-x-10 md:-translate-x-36 lg:-translate-x-36 xl:-translate-x-48 -translate-y-5">
