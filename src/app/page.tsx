@@ -6,7 +6,6 @@ import { MarqueeDetail3D } from "@/components/Client";
 import Service from "@/components/Service";
 import Faquestion from "@/components/Faquestion";
 import Footer from "@/components/Footer";
-import Personal from "@/components/Personal";
 import Head from 'next/head';
 import { useEffect, useRef, useState } from "react";
 import ImageInformation from "@/components/ImageInformation";
@@ -57,7 +56,6 @@ export default function Home() {
           <MarqueeDetail3D />
           <Service />
           <Faquestion />
-          <Personal />
           <ImageInformation />
           <References />
           <Footer />
